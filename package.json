@@ -1,6 +1,7 @@
 {
   "name": "figon-react",
   "version": "0.0.1",
+  "main":"dist/Renderer.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc src/Renderer.tsx --lib ESNext --jsx react-jsx --declaration --esModuleInterop --outDir dist "
