@@ -8,7 +8,11 @@ const Resource: any = { img: Image, Image, a: Anchor, Anchor };
 function Renderer({ view, root, components = {} }: any) {
   let Assets = { ...Resource, ...components };
 
-  let Component = !!Assets[view.tagName] ? Assets[view.tagName] : Element;
+  let Component = !!Assets[view.tagName]
+    ? Assets[view.tagName]
+    : !!Assets["element"]
+    ? Assets["element"]
+    : Element;
 
   const { children = [], ...rest } = view;
   return (
